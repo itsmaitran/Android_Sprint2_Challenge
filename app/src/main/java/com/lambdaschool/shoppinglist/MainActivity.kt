@@ -1,6 +1,6 @@
-package com.lambdaschool.sprint2_challenge
+package com.lambdaschool.shoppinglist
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
