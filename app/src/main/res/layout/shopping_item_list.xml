@@ -20,8 +20,8 @@
                 android:scaleType="fitXY"
                 android:layout_margin="8dp"
                 android:src="@drawable/almond"
-                android:layout_width="56dp"
-                android:layout_height="56dp"/>
+                android:layout_width="48dp"
+                android:layout_height="48dp"/>
 
         <TextView
                 android:id="@+id/tv_product_name"

@@ -1,16 +1,24 @@
-package com.lambdaschool.shoppinglist
+package com.lambdaschool.shoppinglist.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.lambdaschool.shoppinglist.R
+import com.lambdaschool.shoppinglist.model.Shopping
 import kotlinx.android.synthetic.main.shopping_item_list.view.*
 
 class ShoppingListAdapter (val shoppingList: MutableList<Shopping>): RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.shopping_item_list, parent, false) as View)
+        return ViewHolder(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.shopping_item_list,
+                parent,
+                false
+            ) as View
+        )
     }
 
     override fun getItemCount(): Int {
@@ -37,9 +45,13 @@ class ShoppingListAdapter (val shoppingList: MutableList<Shopping>): RecyclerVie
             itemImageView.setImageResource(item.imageId)
             itemNameView.text = item.product
             if (item.isAdded)
-                shoppingItemParent.setBackgroundColor(ContextCompat.getColor(itemView.context,R.color.colorAdded))
+                shoppingItemParent.setBackgroundColor(ContextCompat.getColor(itemView.context,
+                    R.color.colorAdded
+                ))
             else
-                shoppingItemParent.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.colorList))
+                shoppingItemParent.setBackgroundColor(ContextCompat.getColor(itemView.context,
+                    R.color.colorList
+                ))
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.lambdaschool.shoppinglist
+package com.lambdaschool.shoppinglist.model
 
 data class Shopping (
     val product: String,
