@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
                 for (item in ShoppingRepository.shoppingList) {
                     if (item.isAdded) listString += "${item.product}" + ", "
                 }
+                listString = listString.trimEnd(',', ' ')
 
                 return listString
             }
